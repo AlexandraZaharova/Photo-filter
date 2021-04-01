@@ -6,11 +6,32 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="normalize.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <div class="wrapper">
+        <div class="logo">
+          <a><img src="assets/icons/lightlogo.svg" alt="logo"></a>
+          <h1>Online Zoo</h1>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li><a>About</a></li>
+            <li><a>Zoos</a></li>
+            <li><a>Map</a></li>
+            <li><a>Contact Us</a></li>
+            <li><a>Design</a></li>
+          </ul>
+        </nav>
+        <div class="toggle">
+          <input type="checkbox" id="toggle-button" class="toggle-button">
+        </div>
+      </div>
+    </header>
     <main class="main"></main>
     <footer class="footer"></footer>
     <script src="index.js"></script>
