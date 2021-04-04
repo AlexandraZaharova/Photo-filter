@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    /*width: 1920px;*/
+    min-width: 1920px;
     font-family: 'Roboto', sans-serif;
 }
 ul {
