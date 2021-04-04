@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    width: 1920px;
+    /*width: 1920px;*/
     font-family: 'Roboto', sans-serif;
 }
 ul {
@@ -150,7 +150,7 @@ h4 {
 /*main*/
 .main {
     display: flex;
-    height: 1287px;
+    height: 1288px;
 }
 .container {
     width: 1200px;
@@ -365,6 +365,7 @@ div.circle-active {
     height: 751px;
     background: #333333;
     padding-top: 100px;
+    box-sizing: border-box;
 }
 .footer-top {
     height: 54px;
