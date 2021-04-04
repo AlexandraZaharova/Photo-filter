@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     width: 1920px;
     font-family: 'Roboto', sans-serif;
@@ -11,6 +14,9 @@ p {
     margin: 0;
     padding: 0;
     font-size: 14px;
+}
+a {
+    text-decoration: none;
 }
 .header {
     width: 100%;
@@ -62,6 +68,20 @@ h4 {
     line-height: 19px;
     color: #333333;
 }
+.main-nav-list li.active {
+    font-weight: 900;
+    text-decoration: underline;
+}
+.main-nav-list li a {
+    color: #333333;
+}
+.main-nav-list li a:hover {
+    font-weight: 900;
+    transition: all 0.3s ease-out;
+}
+.active a:hover {
+    cursor: default;
+}
 .toggle-button {
     position: relative;
     display: inline-block;
@@ -93,17 +113,18 @@ h4 {
 }
 .toggle-button:checked::after {
     transform: translateX(90%);
-    background-color: #f2f2f2;
+    background-color: #1b1b1b;
 }
 .toggle-button:checked {
-    background-color: #ffffff;
+    background-color: #4f4f4f;
 }
 
 /*btn*/
 .btn {
     width: 245px;
     height: 55px;
-    background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
+    margin: 0 auto;
+    background-image: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
     border-radius: 3px;
     border: none;
     color: #ffffff;
@@ -112,10 +133,15 @@ h4 {
     line-height: 21px;
     text-transform: uppercase;
 }
+.btn:hover {
+    cursor: pointer;
+    background-image: linear-gradient(106.89deg, #4BD8B9 -14.32%, #3ec7d0 100.68%);
+}
 .btn-watch {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 46px;
 }
 .btn-watch__img {
     margin-right: 5px;
@@ -123,8 +149,209 @@ h4 {
 
 /*main*/
 .main {
+    display: flex;
     height: 1287px;
 }
+.container {
+    width: 1200px;
+    margin: 60px auto 100px;
+}
+.container__title {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    color: #333333;
+    margin: 0;
+}
+.container__text {
+    width: 790px;
+    margin: 20px auto 54px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #4f4f4f;
+}
+.map-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 236px;
+}
+.map-gallery__slider {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+.map-gallery__slider > div {
+    position: relative;
+    z-index: 3;
+    background-size: cover;
+    width: 108px;
+    height: 108px;
+    background-position: center;
+    border-radius: 50%;
+}
+.map-gallery__slider > div:hover {
+    transform: scale(1.3);
+    transition: 1s;
+}
+.arrowLeft:hover,
+.arrowRight:hover {
+    cursor: pointer;
+}
+.arrowLeft:hover > path,
+.arrowRight:hover > path {
+    fill: #333333;
+}
+.gorilla {
+    background-image: url("../../assets/images/gorillacirk.jpg");
+}
+.panda {
+    background-image: url("../../assets/images/pandacirkl.jpg");
+    transform: scale(1.3);
+}
+div.circle-active {
+    position: absolute;
+    left: 175px;
+    width: 157px;
+    height: 157px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(7,238,224,1) 0%, rgba(223,73,109,1) 100%);: linear-gradient(90deg, rgba(7,238,224,1) 0%, rgba(223,73,109,1) 100%);
+    z-index: 1;
+}
+.circle-white {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 147px;
+    height: 147px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 2;
+}
+.crocodile {
+    background-image: url("../../assets/images/crocodilecirk.jpg");
+}
+.eagles{
+    background-image: url("../../assets/images/eaglescirk.jpg");
+}
+.tiger {
+    background-image: url("../../assets/images/tiger.jpg");
+}
+.elephant {
+    background-image: url("../../assets/images/elephant.jpg");
+}
+.lion {
+    background-image: url("../../assets/images/lion.jpg");
+}
+.zebra {
+    background-image: url("../../assets/images/zebra.jpg");
+}
+.range {
+    width: 245px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+/*polosa*/
+.range::-webkit-slider-runnable-track {
+    height: 5px;
+    background: rgba(189, 189, 189, 0.57);
+}
+/*polzunok*/
+.range::-webkit-slider-thumb {
+    height: 10px;
+    width: 30px;
+    background-color: #333333;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3px;
+}
+.range::-moz-range-thumb {
+    cursor: pointer;
+}
+.range-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.range-label {
+    font-weight: 900;
+    font-size: 14px;
+    margin-bottom: 11px;
+}
+.range-label > span {
+    font-size: 24px;
+}
+.map-with-placeholder {
+    position: relative;
+    width: 100%;
+    margin-top: 83px;
+}
+.map {
+    background-image: url("../../assets/images/map.svg");
+    width: 100%;
+    height: 498px;
+}
+.map > div > svg {
+    position: relative;
+    z-index: 1;
+}
+.placeholder-panda__svg.active path {
+    fill: #eb5757;
+}
+.placeholder-panda__img,
+.placeholder-crocodile__img,
+.placeholder-eagle__img,
+.placeholder-gorilla__img {
+    position: absolute;
+    top: 13px;
+    left: 11px;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+}
+.placeholder-crocodile__img {
+    background-image: url("../../assets/images/crocodilecirk.jpg");
+}
+.placeholder-panda__img {
+    background-image: url("../../assets/images/pandacirkl.jpg");
+}
+.placeholder-eagle__img {
+    background-image: url("../../assets/images/eaglescirk.jpg");
+}
+.placeholder-gorilla__img {
+    background-image: url("../../assets/images/gorillacirk.jpg");
+}
+.placeholder-panda {
+    position: absolute;
+    top: 98px;
+    left: 903px;
+}
+.placeholder-crocodile {
+    position: absolute;
+    top: 102px;
+    left: 245px;
+}
+.placeholder-eagle {
+    position: absolute;
+    top: 82px;
+    left: 132px;
+}
+.placeholder-gorilla {
+    position: absolute;
+    top: 189px;
+    left: 571px;
+}
+
 .social {
     width: 20px;
     margin-top: 722px;
@@ -140,11 +367,12 @@ h4 {
     padding-top: 100px;
 }
 .footer-top {
+    height: 54px;
     display: flex;
     align-items: center;
-    margin-bottom: 53px;
+    margin-bottom: 57px;
 }
-.logo {
+.footer-logo {
     flex-basis: 51%;
 }
 .footer-top__box {
@@ -162,7 +390,17 @@ h4 {
     height: 100%;
     color: #fefefe;
 }
-.footer-box__btn {
+.footer-nav__list li a {
+    color: #fefefe;
+}
+.footer-nav__list li a:hover {
+    font-weight: 900;
+    transition: all 0.3s ease-out;
+}
+.active a:hover {
+    cursor: default;
+}
+.donate {
     width: 275px;
     font-weight: 500;
 }

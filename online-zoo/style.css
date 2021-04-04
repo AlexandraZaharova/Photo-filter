@@ -12,6 +12,9 @@ p {
   padding: 0;
   font-size: 14px;
 }
+a {
+  text-decoration: none;
+}
 
 /*range*/
 .range {
@@ -108,6 +111,21 @@ h4 {
   line-height: 19px;
   color: #333333;
 }
+.main-nav-list li.active {
+  font-weight: 900;
+  text-decoration: underline;
+}
+.main-nav-list li a {
+  color: #333333;
+}
+.main-nav-list li a:hover {
+  cursor: pointer;
+  font-weight: 900;
+  transition: all 0.3s ease-out;
+}
+.active a:hover {
+  cursor: default;
+}
 .toggle-button {
   position: relative;
   display: inline-block;
@@ -139,10 +157,10 @@ h4 {
 }
 .toggle-button:checked::after {
   transform: translateX(90%);
-  background-color: #f2f2f2;
+  background-color: #1b1b1b;
 }
 .toggle-button:checked {
-  background-color: #ffffff;
+  background-color: #4f4f4f;
 }
 
 /*first screen*/
@@ -188,6 +206,10 @@ h4 {
   font-size: 18px;
   line-height: 21px;
   text-transform: uppercase;
+}
+.btn:hover {
+  cursor: pointer;
+  background-image: linear-gradient(106.89deg, #4BD8B9 -14.32%, #3ec7d0 100.68%);
 }
 .btn-watch {
   display: flex;
@@ -488,18 +510,21 @@ h4 {
   padding-top: 100px;
 }
 .footer-top {
+  height: 54px;
   display: flex;
   align-items: center;
+  margin-bottom: 57px;
 }
-.footer-top > div {
-  flex-basis: 50%;
+.footer-logo {
+  flex-basis: 51%;
 }
 .footer-top__box {
+  flex-basis: 49%;
   display: flex;
-  justify-content: space-between;
 }
 .footer-nav {
-  width: 404px;
+  width: 378px;
+  margin-right: 140px;
 }
 .footer-nav__list {
   display: flex;
@@ -508,19 +533,38 @@ h4 {
   height: 100%;
   color: #fefefe;
 }
+.footer-nav__list li a {
+  color: #fefefe;
+}
+.footer-nav__list li a:hover {
+  font-weight: 900;
+  transition: all 0.3s ease-out;
+}
+.active a:hover {
+  cursor: default;
+}
+.donate {
+  width: 275px;
+  font-weight: 500;
+}
 .contacts-container {
   display: flex;
 }
-.contacts-container > div {
-  flex-basis: 50%;
+.contacts-form-container {
+  flex-basis: 51%;
+}
+.contacts {
+  flex-basis: 49%;
 }
 .contacts-form__title {
   font-weight: 900;
   font-size: 20px;
   line-height: 23px;
   color: #fefefe;
+  margin-bottom: 33px;
 }
 .contacts-form {
+  position: relative;
   width: 383px;
   height: 292px;
   display: flex;
@@ -528,6 +572,7 @@ h4 {
 }
 .contacts-form__name,
 .contacts-form__email {
+  height: 23px;
   margin-bottom: 20px;
   border: none;
   border-bottom: 1px solid #bdbdbd;
@@ -536,12 +581,17 @@ h4 {
   line-height: 16px;
   color: #e0e0e0;
 }
+.contacts-form__email {
+  margin-bottom: 23px;
+}
 .contacts-form__textarea {
   position: relative;
+  height: 115px;
+  margin-bottom: 32px;
 }
 .textarea__text {
   position: absolute;
-  bottom: 122px;
+  bottom: 101px;
   left: 10px;
   font-size: 12px;
   line-height: 14px;
@@ -550,7 +600,7 @@ h4 {
 }
 .textarea {
   width: 100%;
-  height: 124px;
+  height: 115px;
   margin-top: 5px;
   background-color: #333333;
   resize: none;
@@ -573,23 +623,30 @@ h4 {
   border: 1px solid #bdbdbd;
 }
 .checkbox__text {
-  margin-left: 5px;
+  margin-left: 8px;
   font-size: 12px;
   line-height: 14px;
   color: #bdbdbd;
 }
 .contacts-form__btn {
+  position: absolute;
+  bottom: 0;
+  left: 261px;
   width: 108px;
   height: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
   background-color: #333333;
   border: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   color: #fefefe;
+}
+.contacts-box {
+  margin-top: 35px;
 }
 .contacts__title {
   font-weight: bold;
@@ -599,25 +656,43 @@ h4 {
   color: #fefefe;
 }
 .contacts-box > p {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #fefefe;
+  margin-bottom: 5px;
 }
 .contacts-box__phone {
   margin-top: 20px;
 }
+.footer__social {
+  width: 125px;
+  height: 19px;
+  margin-top: 28px;
+}
+.footer__social_list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .line {
   width: 100%;
   height: 1px;
+  margin-top: 58px;
   border-top: 0.5px solid #fefefe;
 }
 .author,
 .school {
   font-size: 12px;
+  font-weight: 400;
   line-height: 14px;
   color: #bdbdbd;
 }
 .author {
-  margin-top: 28px;
+  margin-top: 27px;
+}
+.school {
+  margin-top: 5px;
 }
