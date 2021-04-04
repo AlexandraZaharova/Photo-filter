@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78d3a2be-cf5e-4685-9df0-75c6e3563e6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/Zoos/alligator/alligator.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/Zoos/alligator/alligator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/Zoos/alligator/alligator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Zoos/eagle/eagle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Zoos/eagle/eagle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Zoos/eagle/eagle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Zoos/gorilla/gorilla.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Zoos/gorilla/gorilla.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Zoos/gorilla/gorilla.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Zoos/alligator/alligator.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Zoos/alligator/alligator.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +48,7 @@
       <updated>1617205298697</updated>
       <workItem from="1617205300642" duration="9571000" />
       <workItem from="1617283241593" duration="73215000" />
-      <workItem from="1617543850537" duration="452000" />
+      <workItem from="1617543850537" duration="1513000" />
     </task>
     <servers />
   </component>
