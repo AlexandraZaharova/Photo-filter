@@ -277,7 +277,16 @@ div.circle-active {
     -webkit-appearance: none;
     margin-top: -3px;
 }
+/*polosa*/
+.range::-moz-range-track {
+    height: 5px;
+    background: rgba(189, 189, 189, 0.57);
+}
+/*polzunok*/
 .range::-moz-range-thumb {
+    height: 10px;
+    width: 30px;
+    background-color: #333333;
     cursor: pointer;
 }
 .range-box {
