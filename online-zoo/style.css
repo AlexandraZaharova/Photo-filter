@@ -789,6 +789,80 @@ li.active a:hover {
   top: 189px;
   left: 571px;
 }
+.tooltip {
+  position: absolute;
+  width: 436px;
+  height: 149px;
+  display: none;
+  align-items: center;
+  background: #FEFEFE;
+  box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+  border-radius: 8px;
+}
+.tooltip-crocodile {
+  top: 81px;
+  right: 41px;
+}
+.tooltip-panda {
+  top: 71px;
+  left: 51px;
+}
+.tooltip-eagle {
+  top: 81px;
+  right: 41px;
+}
+.tooltip-gorilla {
+  top: 81px;
+  right: 41px;
+}
+.tooltip-img {
+  width: 65px;
+  height: 65px;
+  margin-left: 44px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+.tooltip-text {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+h5 {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+.tooltip-text p {
+  font-size: 14px;
+  line-height: 16px;
+  color: #4f4f4f;
+}
+.tooltip-text p span {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+}
+.tooltip-crocodile .tooltip-img {
+  background-image: url("assets/images/crocodilecirk.jpg");
+}
+.tooltip-panda .tooltip-img {
+  background-image: url("assets/images/pandacirkl.jpg");
+}
+.tooltip-eagle .tooltip-img {
+  background-image: url("assets/images/eaglescirk.jpg");
+}
+.tooltip-gorilla .tooltip-img {
+  background-image: url("assets/images/gorillacirk.jpg");
+}
+.placeholder:hover > .tooltip {
+  display: flex;
+}
 
 /*footer*/
 .footer {
