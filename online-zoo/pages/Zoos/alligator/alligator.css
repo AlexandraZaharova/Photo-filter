@@ -62,10 +62,11 @@ h1 {
     color: #333333;
 }
 .main-nav-list li a:hover {
+    cursor: pointer;
     font-weight: 900;
     transition: all 0.3s ease-out;
 }
-.active a:hover {
+li.active a:hover {
     cursor: default;
 }
 .toggle-button {
@@ -121,6 +122,8 @@ h1 {
 }
 .btn:hover {
     cursor: pointer;
+    transform: scale(1.01);
+    transition: 0.3s;
     background-image: linear-gradient(106.89deg, #4BD8B9 -14.32%, #3ec7d0 100.68%);
 }
 .btn-watch {
