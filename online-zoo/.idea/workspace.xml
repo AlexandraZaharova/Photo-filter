@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78d3a2be-cf5e-4685-9df0-75c6e3563e6d" name="Default Changelist" comment="" />
+    <list default="true" id="78d3a2be-cf5e-4685-9df0-75c6e3563e6d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pages/Zoos/panda/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Zoos/panda/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Zoos/panda/.idea/panda.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Zoos/panda/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Map/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Map/map.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Zoos/alligator/alligator.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Zoos/alligator/alligator.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Zoos/eagle/eagle.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Zoos/eagle/eagle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Zoos/gorilla/gorilla.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Zoos/gorilla/gorilla.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Zoos/panda/panda.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Zoos/panda/panda.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +51,7 @@
       <workItem from="1617205300642" duration="9571000" />
       <workItem from="1617283241593" duration="73215000" />
       <workItem from="1617543850537" duration="38848000" />
+      <workItem from="1618582437168" duration="302000" />
     </task>
     <servers />
   </component>
