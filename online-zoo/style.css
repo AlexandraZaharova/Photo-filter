@@ -332,11 +332,12 @@ li.active a:hover {
   margin: 232px auto 34px;
 }
 .textBtn {
-  width: 194px;
+  width: 92.38%;
   margin-top: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .link-watch {
   width: 113px;
@@ -668,6 +669,7 @@ li.active a:hover {
   background-image: url("assets/images/pandacirkl.jpg");
 }
 .fourth_screen-slider__text {
+  width: 92.38%;
   margin: 269px auto 44px;
 }
 .fourth-screen__range-box {
@@ -689,15 +691,19 @@ li.active a:hover {
     height: 288px;
     margin-bottom: 121px;
   }
+  .fourth_screen-slider {
+    column-gap: 20px;
+  }
   .fourth_screen-slider__img{
-    width: 210px;
+    width: 23.33%;
     height: 301px;
     margin-right: 0;
   }
   .fourth_screen-slider__text {
     margin: 183px auto 44px;
   }
-  .fourth_screen-slider > .arrowLeft-box {
+  .fourth_screen-slider > .arrowLeft-box,
+  .fourth_screen-slider > .arrowRight-box {
     top: 140px;
   }
 
