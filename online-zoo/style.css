@@ -233,7 +233,6 @@ li.active a:hover {
 
 }
 
-
 /*first screen*/
 .first-screen {
   width: 100%;
@@ -684,6 +683,10 @@ li.active a:hover {
   height: 323px;
   margin-bottom: 30px;
   margin-top: 28px;
+  background-image: url("assets/images/deer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .second-screen__range-label,
 .fourth_screen__range-label {
@@ -725,6 +728,11 @@ li.active a:hover {
     margin-bottom: 68px;
   }
 
+}
+@media (max-width: 620px) {
+  .second_screen-img {
+    background-position: inherit;
+  }
 }
 @media (max-width: 320px) {
 
@@ -1306,6 +1314,13 @@ li.active a:hover {
     margin-top: 25px;
     margin-bottom: 40px;
   }
+  .sixth-screen__range {
+    width: 245px;
+  }
+  .sixth-screen__range-box {
+    margin-top: 31px;
+  }
+
 }
 
 /*seventh-screen*/
