@@ -1306,6 +1306,13 @@ li.active a:hover {
     margin-top: 25px;
     margin-bottom: 40px;
   }
+  .sixth-screen__range {
+    width: 245px;
+  }
+  .sixth-screen__range-box {
+    margin-top: 31px;
+  }
+
 }
 
 /*seventh-screen*/
