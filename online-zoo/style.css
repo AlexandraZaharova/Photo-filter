@@ -222,7 +222,7 @@ li.active a:hover {
   }
 
 }
-@media (max-width: 320px) {
+@media (max-width: 500px) {
 
   .header {
     height: 92px;
@@ -583,7 +583,7 @@ li.active a:hover {
   }
 
 }
-@media (max-width: 320px) {
+@media (max-width: 500px) {
 
   .first-screen {
     height: 669px;
@@ -1079,9 +1079,9 @@ li.active a:hover {
   }
   .schema {
     flex-direction: column;
-    height: 935px;
+    height: 78%;
     row-gap: 30px;
-    margin-top: 47px;
+    margin-top: 8%;
   }
   .arrowDown {
     display: block;
@@ -1096,6 +1096,29 @@ li.active a:hover {
   }
   .fifth-screen__title {
     margin-bottom: 18px;
+  }
+
+}
+@media (max-width: 570px) {
+
+  .schema > .schema-img {
+    width: 50%;
+  }
+
+}
+@media (max-width: 500px) {
+  .fifth-screen {
+    height: 1230px;
+  }
+  .fifth-screen__container {
+    height: 1030px;
+  }
+
+}
+@media (max-width: 400px) {
+
+  .schema > .schema-img {
+    width: 60%;
   }
 
 }
