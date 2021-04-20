@@ -1136,6 +1136,7 @@ li.active a:hover {
     margin: 50px auto;
   }
   .schema {
+    height: 85%;
     margin-top: 12px;
     margin-bottom: 40px;
   }
@@ -1305,12 +1306,6 @@ li.active a:hover {
     margin-top: 25px;
     margin-bottom: 40px;
   }
-  /*.photo {*/
-  /*  margin-top: 52px;*/
-  /*}*/
-  /*.sixth-screen__range-label {*/
-  /*  margin-bottom: 14px;*/
-  /*}*/
 }
 
 /*seventh-screen*/
@@ -1550,6 +1545,43 @@ h5 {
     --mark-width: 32px;
     --mark-height: 46px;
     margin-bottom: 26px;
+  }
+  .tooltip {
+    width: 238px;
+    height: 113px;
+    align-items: flex-start;
+    padding-top: 17px;
+    box-sizing: border-box;
+  }
+  .tooltip-img {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+  }
+  .tooltip-text {
+    width: 151px;
+    margin-left: 8px;
+  }
+  h5 {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 4px;
+  }
+  .tooltip-text p {
+    font-size: 11px;
+    line-height: 13px;
+    margin-bottom: 4px;
+  }
+  .tooltip-text p span {
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .tooltip-crocodile {
+    left: 48%;
+  }
+  .tooltip-panda {
+    top: 43px;
+    right: 7px;
   }
 
 }
