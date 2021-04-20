@@ -684,6 +684,10 @@ li.active a:hover {
   height: 323px;
   margin-bottom: 30px;
   margin-top: 28px;
+  background-image: url("assets/images/deer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .second-screen__range-label,
 .fourth_screen__range-label {
@@ -725,6 +729,11 @@ li.active a:hover {
     margin-bottom: 68px;
   }
 
+}
+@media (max-width: 620px) {
+  .second_screen-img {
+    background-position: inherit;
+  }
 }
 @media (max-width: 320px) {
 
