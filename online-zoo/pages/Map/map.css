@@ -248,7 +248,7 @@ h4 {
 }
 .container__text {
     width: 790px;
-    margin: 20px auto 0;
+    margin: 20px auto 53px;
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
@@ -260,12 +260,12 @@ h4 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 261px;
+    height: 238px;
     box-sizing: border-box;
 }
 .map-gallery__slider {
     width: 100%;
-    height: 250px;
+    height: 157px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -273,7 +273,6 @@ h4 {
     column-gap: 32px;
 }
 .map-gallery__wrapper {
-    height: 250px;
     width: 89.42%;
     display: flex;
     align-items: center;
@@ -287,7 +286,7 @@ h4 {
     align-items: center;
     column-gap: 30px;
 }
-.map-gallery__img > div {
+.img {
     position: relative;
     z-index: 3;
     background-size: cover;
@@ -296,7 +295,7 @@ h4 {
     background-position: center;
     border-radius: 50%;
 }
-.map-gallery__img > div:hover {
+.img:hover {
     transform: scale(1.3);
     transition: 1s;
 }
@@ -312,17 +311,20 @@ h4 {
     background-image: url("../../assets/images/gorillacirk.jpg");
 }
 .panda {
-    background-image: url("../../assets/images/pandacirkl.jpg");
+    position: absolute;
+    left: 9%;
+    top: 9%;
+    background-image: url(../../assets/images/pandacirkl.jpg);
     transform: scale(1.3);
 }
 div.circle-active {
-    position: absolute;
-    left: 175px;
+    position: relative;
     width: 157px;
     height: 157px;
     border-radius: 50%;
     background: linear-gradient(90deg, rgba(7,238,224,1) 0%, rgba(223,73,109,1) 100%);: linear-gradient(90deg, rgba(7,238,224,1) 0%, rgba(223,73,109,1) 100%);
     z-index: 1;
+    margin: 0 -25px;
 }
 div.circle-active:hover {
     transform: none;
@@ -403,7 +405,7 @@ div.circle-active:hover {
 .map-with-placeholder {
     position: relative;
     width: 100%;
-    margin-top: 111px;
+    margin-top: 81px;
     --mark-width: 66px;
     --mark-height: 93px;
 }
@@ -471,26 +473,58 @@ div.circle-active:hover {
     .main {
         height: 1110px;
     }
+    .container__text {
+        width: 87.78%;
+        margin-bottom: 35px;
+    }
     .map-gallery {
-        height: 226px;
-        width: 90%;
+        height: 229px;
+        width: 89%;
         margin: 0 auto;
     }
     .map-gallery__slider {
-        height: 223px;
-    }
-    div.circle-active {
-        left: 191px;
+        height: 157px;
     }
     .map-gallery__wrapper {
-        width: 81%;
+        width: 82.6%;
+    }
+    .range-label {
+        margin-bottom: 13px;
     }
     .map-with-placeholder {
-        margin: 90px auto -14px;
+        margin: 52px auto -14px;
         width: 88.89%;
     }
     .map {
         height: 388px;
+    }
+    .placeholder-crocodile__svg,
+    .placeholder-panda__svg,
+    .placeholder-eagle__svg,
+    .placeholder-gorilla__svg {
+        width: 59px;
+        height: 84px;
+    }
+    .placeholder-panda__img,
+    .placeholder-crocodile__img,
+    .placeholder-eagle__img,
+    .placeholder-gorilla__img {
+        width: 35px;
+        height: 35px;
+    }
+    .placeholder-gorilla {
+        top: calc(58.3% - var(--mark-height));
+        left: calc(51% - var(--mark-width) / 2);
+    }
+    .placeholder-panda {
+        top: calc(39% - var(--mark-height));
+        left: calc(77.2% - var(--mark-width) / 2);
+    }
+    .contacts-form__textarea {
+        margin-bottom: 28px;
+    }
+    .contacts-form__btn {
+        bottom: 3px
     }
 
 }
@@ -506,29 +540,44 @@ div.circle-active:hover {
         width: 100%;
     }
     .map-gallery__slider {
-        column-gap: 9px;
+        column-gap: 8px;
     }
     .map-gallery__wrapper {
         width: 87%;
     }
     .map-gallery__img {
-        column-gap: 28px;
+        column-gap: 19px;
+    }
+    div.circle-active {
+        margin: 0 -12px;
     }
     .map {
         height: 289px;
-    }
-    div.circle-active {
-        left: 151px;
     }
     .placeholder > svg > path{
         fill: rgba(73, 214, 223, 1);
     }
     .map-with-placeholder {
-        margin: 75px auto -14px;
+        margin: 37px auto -14px;
         width: 100%;
+    }
+    .placeholder-crocodile__svg,
+    .placeholder-panda__svg,
+    .placeholder-eagle__svg,
+    .placeholder-gorilla__svg {
+        width: 67px;
+        height: 94px;
+    }
+    .placeholder-panda__img,
+    .placeholder-crocodile__img,
+    .placeholder-eagle__img,
+    .placeholder-gorilla__img {
+        width: 43px;
+        height: 43px;
     }
     .placeholder-crocodile {
         top: calc(37% - var(--mark-height));
+        left: calc(22.8% - var(--mark-width) / 2);
     }
     .placeholder-panda {
         top: calc(35.4% - var(--mark-height));
@@ -539,10 +588,17 @@ div.circle-active:hover {
         top: calc(33.7% - var(--mark-height));
         left: calc(14.2% - var(--mark-width) / 2);
     }
+    .placeholder-gorilla {
+        top: calc(55.3% - var(--mark-height));
+        left: calc(50% - var(--mark-width) / 2);
+    }
 
 }
 @media (max-width: 320px) {
 
+    .main {
+        height: 778px;
+    }
     .container {
         margin: 33px auto 0;
     }
@@ -555,10 +611,14 @@ div.circle-active:hover {
         margin-top: 8px;
         font-size: 12px;
         line-height: 14px;
+        margin-bottom: 26px;
     }
     .map-gallery {
         height: 164px;
-        width: 93%;
+        width: 92.7%;
+    }
+    .map-gallery__slider {
+        height: 85px;
     }
     .map-gallery__img > div.circle-active {
         width: 85px;
@@ -567,37 +627,51 @@ div.circle-active:hover {
     .map-gallery__img {
         column-gap: 22px;
     }
-    div.circle-active {
-        left: 97px;
-    }
     .map-gallery__slider {
         height: 170px;
         column-gap: 0;
     }
-    .map-gallery__img > div {
+    .img {
         width: 60px;
         height: 60px;
+    }
+    .range-box {
+        margin-left: 24px;
+    }
+    .range-label {
+        margin-bottom: 15px;
     }
     .map {
         height: 146px;
     }
-    .placeholder > svg {
-        width: 32px;
-        height: 46px;
+    .map-with-placeholder {
+        margin: 41px auto -15px;
+        --mark-width: 33px;
+        --mark-height: 48px;
+    }
+    .placeholder-crocodile__svg,
+    .placeholder-panda__svg,
+    .placeholder-eagle__svg,
+    .placeholder-gorilla__svg {
+        width: 33px;
+        height: 47px;
     }
     .placeholder-panda__img,
     .placeholder-crocodile__img,
     .placeholder-eagle__img,
     .placeholder-gorilla__img {
-        width: 19px;
-        height: 19px;
-        top: 7px;
-        left: 7px;
+        width: 22px;
+        height: 22px;
+        top: 5px;
+        left: 5px;
     }
-    .map-with-placeholder {
-        --mark-width: 32px;
-        --mark-height: 46px;
-        margin-bottom: 26px;
+    .placeholder-panda {
+        top: calc(36.4% - var(--mark-height));
+        left: calc(78% - var(--mark-width) / 2);
+    }
+    .placeholder-crocodile {
+        top: calc(37.7% - var(--mark-height));
+        left: calc(23.3% - var(--mark-width) / 2);
     }
 
 }
@@ -805,6 +879,9 @@ div.circle-active:hover {
 }
 @media (max-width: 1200px) {
 
+    .footer {
+        height: 738px;
+    }
     .footer-top__box {
         position: relative;
     }
@@ -831,38 +908,32 @@ div.circle-active:hover {
         flex-basis: 25%;
     }
     .donate {
-        right: 0;
+        right: -5vw;
     }
 
 }
 @media (max-width: 900px) {
 
-    .contacts-form-container {
-        flex-basis: 75%;
-    }
-    .contacts {
-        flex-basis: 25%;
-    }
     .donate {
-        right: 0;
+        right: -12vw;
     }
 
 }
-@media (max-width: 640px) {
+@media (max-width: 760px) {
 
     .footer {
         height: 1068px;
-        padding-top: 57px;
+        padding-top: 50px;
     }
     .footer-top {
         flex-direction: column;
         width: 51px;
-        height: 160px;
-        margin-bottom: 20px;
+        height: 164px;
+        margin-bottom: 22px;
         margin-top: 46px;
     }
     .footer-logo {
-        flex-basis: 42%;
+        flex-basis: 45%;
     }
     .footer-nav {
         height: 91px;
@@ -879,6 +950,9 @@ div.circle-active:hover {
     .contacts-form-container {
         margin-bottom: 72px;
     }
+    .contacts-form__title {
+        margin-bottom: 36px;
+    }
     .contacts-form__textarea {
         margin-bottom: 27px;
     }
@@ -890,10 +964,57 @@ div.circle-active:hover {
     }
     .contacts-form__btn {
         left: 261px;
+        bottom: 5px;
     }
     .donate {
         top: -73px;
-        left: 325px;
+        right: -75vw;
+    }
+    .line {
+        margin-top: 62px;
+    }
+
+}
+@media (max-width: 640px) {
+
+    .donate {
+        top: -73px;
+        right: -86vw;
+    }
+
+}
+@media (max-width: 550px) {
+
+    .footer {
+        height: 1100px;
+        padding-top: 3px;
+    }
+    .footer-top {
+        height: 176px;
+        margin-top: 46px;
+    }
+    .footer-logo {
+        flex-basis: 49%;
+    }
+    .footer-top__box {
+        flex-basis: 41%;
+    }
+    .contacts-container {
+        width: 100%;
+    }
+    .contacts-form__btn {
+        left: 192px;
+        bottom: 3px;
+    }
+    .contacts-form-container {
+        margin-bottom: 51px;
+    }
+    .line {
+        margin-top: 172px;
+    }
+    .donate {
+        top: 743px;
+        left: -8vw;
     }
 
 }
