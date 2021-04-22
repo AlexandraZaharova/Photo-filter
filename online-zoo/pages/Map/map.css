@@ -625,7 +625,7 @@ div.circle-active:hover {
         height: 85px;
     }
     .map-gallery__img {
-        column-gap: 22px;
+        column-gap: 20px;
     }
     .map-gallery__slider {
         height: 170px;
