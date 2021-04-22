@@ -4,7 +4,7 @@
     <list default="true" id="46f69063-b954-46cd-9af3-fb1ae4e60233" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/online-zoo/pages/Map/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/online-zoo/pages/Map/map.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-zoo/pages/Map/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/online-zoo/pages/Map/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online-zoo/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/online-zoo/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +47,7 @@
       <workItem from="1617201785574" duration="736000" />
       <workItem from="1617205163245" duration="120000" />
       <workItem from="1618857449869" duration="297000" />
-      <workItem from="1618902642218" duration="28505000" />
+      <workItem from="1618902642218" duration="30735000" />
     </task>
     <servers />
   </component>

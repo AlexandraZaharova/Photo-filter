@@ -585,7 +585,7 @@ li.active a:hover {
 @media (max-width: 500px) {
 
   .first-screen {
-    height: 669px;
+    height: 667px;
   }
   .first_screen-watch {
     width: 98%;
@@ -1013,6 +1013,13 @@ li.active a:hover {
   }
   .fourth-screen__range-box {
     margin-top: 31px;
+  }
+  .textBtn {
+    margin-top: 15px;
+  }
+  .link-watch, .link-donate {
+    font-size: 12px;
+    line-height: 14px;
   }
 
 }
@@ -1530,7 +1537,7 @@ h5 {
 @media (max-width: 320px) {
 
   .seventh-screen {
-    height: 411px;
+    height: 413px;
   }
   .seventh-screen__container {
     margin: 50px auto;
@@ -1832,6 +1839,9 @@ h5 {
 }
 @media (max-width: 1200px) {
 
+  .footer {
+    height: 737px;
+  }
   .footer-top__box {
     position: relative;
   }
@@ -1847,6 +1857,12 @@ h5 {
   .footer-nav {
      margin-right: 0;
   }
+  .line {
+    margin-top: 60px;
+  }
+  .author {
+    margin-top: 29px;
+  }
 
 }
 @media (max-width: 1100px) {
@@ -1858,33 +1874,32 @@ h5 {
     flex-basis: 25%;
   }
   .donate {
-    right: 0;
+    right: -5vw;
   }
 
 }
 @media (max-width: 900px) {
 
-  .contacts-form-container {
-    flex-basis: 75%;
-  }
-  .contacts {
-    flex-basis: 25%;
-  }
   .donate {
-    right: 0;
+    right: -12vw;
   }
 
 }
-@media (max-width: 900px) {
+@media (max-width: 760px) {
 
   .footer {
     height: 1068px;
+    padding-top: 50px;
   }
   .footer-top {
     flex-direction: column;
     width: 51px;
-    height: 160px;
-    margin-bottom: 23px;
+    height: 164px;
+    margin-bottom: 22px;
+    margin-top: 46px;
+  }
+  .footer-logo {
+    flex-basis: 45%;
   }
   .footer-nav {
     height: 91px;
@@ -1896,44 +1911,82 @@ h5 {
   }
   .contacts-container {
     flex-direction: column;
+    width: 64%;
   }
   .contacts-form-container {
     margin-bottom: 72px;
   }
-  .contacts {
-    position: static;
+  .contacts-form__title {
+    margin-bottom: 36px;
   }
-  .donate {
-    top: -73px;
-    left: 325px;
-  }
-
-}
-@media (max-width: 900px) {
-
-  .footer {
-    height: 1100px;
-    padding-top: 50px;
-  }
-  .footer-top {
-    height: 175px;
+  .contacts-form__textarea {
+    margin-bottom: 27px;
   }
   .contacts-form {
     width: 100%;
   }
+  .contacts {
+    position: static;
+  }
   .contacts-form__btn {
-    bottom: 4px;
-    left: 191px;
-   }
+    left: 261px;
+    bottom: 5px;
+  }
+  .donate {
+    top: -73px;
+    right: -75vw;
+  }
+  .line {
+    margin-top: 62px;
+  }
+
+}
+@media (max-width: 640px) {
+
+  .donate {
+    top: -73px;
+    right: -85.8vw;
+  }
+  .contacts-form__title {
+    margin-bottom: 34px;
+  }
+  .contacts-form__textarea {
+    margin-bottom: 23px;
+  }
+
+}
+@media (max-width: 550px) {
+
+  .footer {
+    height: 1100px;
+    padding-top: 3px;
+  }
+  .footer-top {
+    height: 176px;
+    margin-top: 46px;
+  }
+  .footer-logo {
+    flex-basis: 49%;
+  }
+  .footer-top__box {
+    flex-basis: 41%;
+  }
+  .contacts-container {
+    width: 100%;
+  }
+  .contacts-form__btn {
+    left: 192px;
+    bottom: 3px;
+  }
   .contacts-form-container {
     margin-bottom: 51px;
   }
-  .donate {
-    top: 742px;
-    left: 13px;
-  }
   .line {
     margin-top: 170px;
+  }
+  .donate {
+    top: 743px;
+    left: 4vw;
   }
 
 }
