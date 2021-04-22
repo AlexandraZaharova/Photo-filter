@@ -26,8 +26,11 @@
             <li><a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">Design</a></li>
           </ul>
         </nav>
-        <div class="toggle">
-          <input type="checkbox" id="toggle-button" class="toggle-button">
+        <div class="switch">
+          <div class="toggle">
+            <input type="checkbox" id="toggle-button" class="toggle-button">
+          </div>
+          <div class="burger"></div>
         </div>
       </div>
     </header>
@@ -43,13 +46,16 @@
             </clipPath>
           </defs>
         </svg>
-        <div class="circle-active">
-          <div class="circle-white"></div>
+        <div class="sidebar-slider">
+          <div class="circle-active">
+            <div class="circle-white">
+              <div class="panda img sidebar-active" title="panda"></div>
+            </div>
+          </div>
+          <a href="../eagle/eagle.html"><div class="eagles img" title="eagle"></div></a>
+          <a href="../alligator/alligator.html"><div class="crocodile img" title="alligator"></div></a>
+          <a href="../gorilla/gorilla.html"><div class="gorilla img" title="gorilla"></div></a>
         </div>
-        <div class="panda sidebar-active" title="panda"></div>
-        <div class="eagles" title="eagle"></div>
-        <div class="crocodile" title="alligator"></div>
-        <div class="gorilla" title="gorilla"></div>
         <svg class="arrowDown" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">
             <path d="M11.4999 18.056C11.0877 18.056 10.6756 17.8986 10.3613 17.5845L0.471825 7.69487C-0.157275 7.06577 -0.157275 6.04579 0.471825 5.41695C1.10067 4.7881 2.12045 4.7881 2.7496 5.41695L11.4999 14.1678L20.2503 5.41725C20.8794 4.78841 21.8991 4.78841 22.5279 5.41725C23.1573 6.0461 23.1573 7.06608 22.5279 7.69518L12.6386 17.5848C12.3241 17.8989 11.912 18.056 11.4999 18.056Z" fill="#828282"/>
@@ -97,7 +103,6 @@
               <button class="btn feed">feed</button>
             </div>
           </div>
-
         </div>
       </section>
     </main>
