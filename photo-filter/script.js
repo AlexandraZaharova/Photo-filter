@@ -1,4 +1,5 @@
 const inputs = document.querySelectorAll('.filters input');
+const imgContainer = document.querySelector('.img-container');
 const outputs = document.querySelectorAll('.filters output');
 let flag = 0;
 
@@ -6,20 +7,37 @@ function drawImageFromComp() {
     const canvas = document.createElement('canvas');
     canvas.setAttribute('class', 'first');
     const img = document.querySelector('img');
-    img.after(canvas);
-    const ctx = canvas.getContext('2d');
-    canvas.width = img.naturalWidth;
-    canvas.height = img.naturalHeight;
-    ctx.drawImage(img, 0, 0);
-    img.setAttribute('class', 'img-none');
+    imgContainer.after(canvas);
+    img.onload = function() {
+        const ctx = canvas.getContext('2d');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        ctx.drawImage(img, 0, 0);
+        imgContainer.setAttribute('class', 'img-none');
+    }
 }
 function handleUpdate() {
     const suffix = this.dataset.sizing;
     this.nextElementSibling.value = this.value;
     if (document.querySelector('canvas').getAttribute('class') == "first") {
-        drawImage(document.querySelector('img').src);
+        drawImageFirst();
     } else {
         getLink(flag);
+    }
+}
+function drawImageFirst() {
+    const canvas = document.querySelector('canvas');
+    const img = document.querySelector('img');
+    img.onload = function() {
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext("2d");
+        ctx.filter = `blur(${outputs[0].value}px) 
+        invert(${outputs[1].value}%)
+        sepia(${outputs[2].value}%) 
+        saturate(${outputs[3].value}%)
+        hue-rotate(${outputs[4].value}deg)`;
+        ctx.drawImage(img, 0, 0);
     }
 }
 function drawImage(src) {
