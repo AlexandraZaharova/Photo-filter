@@ -10,7 +10,6 @@ function drawImageFromComp() {
     canvas.height = img.naturalHeight;
     ctx.drawImage(img, 0, 0);
     img.setAttribute('class', 'img-none');
-    console.log(document.querySelector('canvas').getAttribute('class'));
 }
 function handleUpdate() {
     const suffix = this.dataset.sizing;
