@@ -6,6 +6,7 @@ const btnNextPicture = document.querySelector('.btn-next');
 const fileInput = document.querySelector('input[type="file"]');
 const btnDownload = document.querySelector('.btn-save');
 const btnReset = document.querySelector('.btn-reset');
+const btnFullscreen = document.querySelector(".fullscreen");
 
 function drawImageFromComp() {
     const canvas = document.createElement('canvas');
@@ -127,6 +128,13 @@ function handleReset() {
         getLink(flag);
     }
 }
+const fullScreen = () => {
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        document.body.requestFullscreen();
+    }
+}
 
 drawImageFromComp();
 inputs.forEach(input => input.addEventListener('input', handleUpdate));
@@ -134,3 +142,4 @@ btnNextPicture.addEventListener('click', handleNextPicture);
 fileInput.addEventListener('change', handleNewFile);
 btnDownload.addEventListener('click', handleDownload);
 btnReset.addEventListener('click', handleReset);
+btnFullscreen.addEventListener("click", fullScreen)
