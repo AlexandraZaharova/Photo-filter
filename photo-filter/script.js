@@ -2,6 +2,7 @@ const inputs = document.querySelectorAll('.filters input');
 const imgContainer = document.querySelector('.img-container');
 const outputs = document.querySelectorAll('.filters output');
 let flag = 0;
+const btnNextPicture = document.querySelector('.btn-next');
 
 function drawImageFromComp() {
     const canvas = document.createElement('canvas');
@@ -27,18 +28,14 @@ function handleUpdate() {
 }
 function drawImageFirst() {
     const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext("2d");
     const img = document.querySelector('img');
-    img.onload = function() {
-        canvas.width = img.naturalWidth;
-        canvas.height = img.naturalHeight;
-        const ctx = canvas.getContext("2d");
-        ctx.filter = `blur(${outputs[0].value}px) 
+    ctx.filter = `blur(${outputs[0].value}px) 
         invert(${outputs[1].value}%)
         sepia(${outputs[2].value}%) 
         saturate(${outputs[3].value}%)
         hue-rotate(${outputs[4].value}deg)`;
-        ctx.drawImage(img, 0, 0);
-    }
+    ctx.drawImage(img, 0, 0);
 }
 function drawImage(src) {
     const canvas = document.querySelector('canvas');
@@ -55,6 +52,7 @@ function drawImage(src) {
         saturate(${outputs[3].value}%)
         hue-rotate(${outputs[4].value}deg)`;
       ctx.drawImage(img, 0, 0);
+      canvas.removeAttribute('class')
     };
 }
 function getLink(flag) {
@@ -80,6 +78,11 @@ function getLink(flag) {
     }
     drawImage(src);
   }
+  function handleNextPicture() {
+    flag++;
+    getLink(flag);
+  }
 
 drawImageFromComp();
 inputs.forEach(input => input.addEventListener('input', handleUpdate));
+btnNextPicture.addEventListener('click', handleNextPicture);
