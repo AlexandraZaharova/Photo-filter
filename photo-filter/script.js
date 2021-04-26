@@ -4,6 +4,7 @@ const outputs = document.querySelectorAll('.filters output');
 let flag = 0;
 const btnNextPicture = document.querySelector('.btn-next');
 const fileInput = document.querySelector('input[type="file"]');
+const btnDownload = document.querySelector('.btn-save');
 
 function drawImageFromComp() {
     const canvas = document.createElement('canvas');
@@ -104,8 +105,17 @@ function handleNewFile(e) {
     fileInput.value = '';
     drawImageFirst();
 }
+function handleDownload() {
+    const link = document.createElement('a');
+    const canvas = document.querySelector('canvas');
+    link.download = 'download';
+    link.href = canvas.toDataURL();
+    link.click();
+    link.delete;
+};
 
 drawImageFromComp();
 inputs.forEach(input => input.addEventListener('input', handleUpdate));
 btnNextPicture.addEventListener('click', handleNextPicture);
 fileInput.addEventListener('change', handleNewFile);
+btnDownload.addEventListener('click', handleDownload); 
