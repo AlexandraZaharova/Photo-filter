@@ -5,6 +5,7 @@ let flag = 0;
 const btnNextPicture = document.querySelector('.btn-next');
 const fileInput = document.querySelector('input[type="file"]');
 const btnDownload = document.querySelector('.btn-save');
+const btnReset = document.querySelector('.btn-reset');
 
 function drawImageFromComp() {
     const canvas = document.createElement('canvas');
@@ -20,7 +21,6 @@ function drawImageFromComp() {
     }
 }
 function handleUpdate() {
-    const suffix = this.dataset.sizing;
     this.nextElementSibling.value = this.value;
     if (document.querySelector('canvas').getAttribute('class') == "first") {
         drawImageFirst();
@@ -91,7 +91,6 @@ flag++;
 getLink(flag);
 }
 function handleNewFile(e) {
-    // let src;
     const image = document.querySelector('img');
     const file = fileInput.files[0];
     const reader = new FileReader();
@@ -113,9 +112,25 @@ function handleDownload() {
     link.click();
     link.delete;
 };
+function handleReset() {
+    outputs.forEach(output => output.value = 0);
+    inputs.forEach(input => {
+        if (input.name == 'saturate') {
+            input.value = 100;
+            input.nextElementSibling.value = 100;
+        } else input.value = 0;
+    });
+    inputs.forEach(input => console.log(input.name));
+    if (document.querySelector('canvas').getAttribute('class') == "first") {
+        drawImageFirst();
+    } else {
+        getLink(flag);
+    }
+}
 
 drawImageFromComp();
 inputs.forEach(input => input.addEventListener('input', handleUpdate));
 btnNextPicture.addEventListener('click', handleNextPicture);
 fileInput.addEventListener('change', handleNewFile);
-btnDownload.addEventListener('click', handleDownload); 
+btnDownload.addEventListener('click', handleDownload);
+btnReset.addEventListener('click', handleReset);
