@@ -1,4 +1,6 @@
 const inputs = document.querySelectorAll('.filters input');
+const outputs = document.querySelectorAll('.filters output');
+let flag = 0;
 
 function drawImageFromComp() {
     const canvas = document.createElement('canvas');
@@ -10,14 +12,15 @@ function drawImageFromComp() {
     canvas.height = img.naturalHeight;
     ctx.drawImage(img, 0, 0);
     img.setAttribute('class', 'img-none');
-    console.log(document.querySelector('canvas').getAttribute('class'));
 }
 function handleUpdate() {
     const suffix = this.dataset.sizing;
     this.nextElementSibling.value = this.value;
     if (document.querySelector('canvas').getAttribute('class') == "first") {
         drawImage(document.querySelector('img').src);
-    } 
+    } else {
+        getLink(flag);
+    }
 }
 function drawImage(src) {
     const canvas = document.querySelector('canvas');
@@ -36,6 +39,29 @@ function drawImage(src) {
       ctx.drawImage(img, 0, 0);
     };
 }
+function getLink(flag) {
+    let src;
+    let date = new Date();
+    let hours = date.getHours();
+    if (hours >= 6 && hours < 12) {
+      src = "https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/morning/";
+    } else if (hours >= 12 && hours < 18) {
+      src = "https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/day/";
+    } else if (hours >= 18 && hours < 00) {
+      src = "https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/evening/";
+    } else {
+      src = "https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/night/";
+    }
+    if (flag >20) {
+      flag = 1;
+      src += '01.jpg';
+    } else if (flag > 9) {
+      src += `${flag}.jpg`;
+    } else {
+      src += `0${flag}.jpg`;
+    }
+    drawImage(src);
+  }
 
 drawImageFromComp();
 inputs.forEach(input => input.addEventListener('input', handleUpdate));
