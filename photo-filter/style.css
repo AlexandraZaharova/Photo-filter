@@ -178,6 +178,9 @@ img {
     sepia(var(--sepia, 0%)) saturate(var(--saturate, 100%))
     hue-rotate(var(--hue, 0deg));
 }
+.img-none {
+  display: none;
+}
 .fullscreen {
   position: fixed;
   top: 120px;
