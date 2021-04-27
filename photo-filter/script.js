@@ -17,6 +17,11 @@ function drawImageFromComp() {
         const ctx = canvas.getContext('2d');
         canvas.width = img.naturalWidth;
         canvas.height = img.naturalHeight;
+        ctx.filter = `blur(${outputs[0].value}px) 
+            invert(${outputs[1].value}%)
+            sepia(${outputs[2].value}%) 
+            saturate(${outputs[3].value}%)
+            hue-rotate(${outputs[4].value}deg)`;
         ctx.drawImage(img, 0, 0);
         imgContainer.setAttribute('class', 'img-none');
     }
@@ -96,10 +101,7 @@ function handleNewFile(e) {
     const file = fileInput.files[0];
     const reader = new FileReader();
     reader.onload = () => {
-        const img = new Image();
-        img.src = reader.result;
-        image.innerHTML = "";
-        image.replaceWith(img);
+        image.src = reader.result;
     }
     reader.readAsDataURL(file);
     fileInput.value = '';
