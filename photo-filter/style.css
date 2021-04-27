@@ -181,6 +181,11 @@ img {
 .img-none {
   display: none;
 }
+canvas {
+  max-height: 520px;  
+  max-width: 100%;  
+  margin: auto;
+}
 .fullscreen {
   position: fixed;
   top: 120px;
