@@ -82,10 +82,7 @@ function getLink(flag) {
     } else {
       src = "https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/night/";
     }
-    if (flag >20) {
-      flag = 1;
-      src += '01.jpg';
-    } else if (flag > 9) {
+    if (flag > 9) {
       src += `${flag}.jpg`;
     } else {
       src += `0${flag}.jpg`;
@@ -93,8 +90,11 @@ function getLink(flag) {
     drawImage(src);
 }
 function handleNextPicture() {
-flag++;
-getLink(flag);
+    flag++;
+    if (flag >20) {
+        flag = 1;
+    }
+    getLink(flag);
 }
 function handleNewFile(e) {
     const image = document.querySelector('img');
