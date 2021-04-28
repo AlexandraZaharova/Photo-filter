@@ -77,7 +77,7 @@ function getLink(flag) {
       src = "https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/morning/";
     } else if (hours >= 12 && hours < 18) {
       src = "https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/day/";
-    } else if (hours >= 18 && hours < 00) {
+    } else if (hours >= 18 && hours < 0) {
       src = "https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/evening/";
     } else {
       src = "https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/night/";
