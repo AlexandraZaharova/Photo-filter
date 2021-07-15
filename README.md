@@ -1,2 +1,1 @@
-# alexandrazaharova-JSFE2021Q1
-Private repository for @alexandrazaharova
+# stage1-tasks
